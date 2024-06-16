@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load shop_tags %}
+
+{% block content %}
+
+    <div class="container text-center">
+        <h1 class="fst-italic"></h1>
+        <img src="{% media_path object_product.image %}" alt="Картинка" width="250">
+        <p>Название товара: {{ object_product.name }}</p>
+        <p>Категория: {{ object_product.category }}</p>
+        <p>Описание: {{ object_product.description }}</p>
+        <p>Цена: {{ object_product.price }}Р</p>
+        <p>Дата добавления: {{ object_product.created_at }}</p>
+        <p>Дата обновления: {{ object_product.updated_at }}</p>
+    </div>
+{% endblock %}
